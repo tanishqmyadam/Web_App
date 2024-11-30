@@ -2,38 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-function GraphDisplay({ folderPath }) {
-  const [graphFiles, setGraphFiles] = useState([]);
-
-  useEffect(() => {
-    const fetchGraphFiles = async () => {
-      // Replace this with actual API calls or file reading logic
-      const simulatedGraphFiles = [
-        'graph1.png',
-        'graph2.png',
-        'graph3.png'
-      ];
-      setGraphFiles(simulatedGraphFiles);
-    };
-
-    fetchGraphFiles();
-  }, [folderPath]);
-
-  return (
-    <div className="mt-8">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">Generated Graphs</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {graphFiles.map((file, index) => (
-          <div key={index} className="border rounded-md overflow-hidden shadow-md">
-            <img src={`${folderPath}/${file}`} alt={`Graph ${index + 1}`} className="w-full h-auto" />
-            <p className="text-center text-gray-700 mt-2">{file}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function FieldForm() {
   const [formData, setFormData] = useState({
     fieldLength: '',
@@ -113,7 +81,6 @@ export default function FieldForm() {
           Enter
         </button>
       </form>
-      {showGraphs && <GraphDisplay folderPath="/path/to/generated/graphs" />} 
     </div>
   );
 }
