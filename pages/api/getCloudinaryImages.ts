@@ -71,7 +71,7 @@ cloudinary.config({
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'https://web-gei8s4vfh-tanishqmyadams-projects.vercel.app'); // Replace with your Vercel domain
+  res.setHeader('Access-Control-Allow-Origin', 'https://web-kiii4k7ms-tanishqmyadams-projects.vercel.app/'); // Replace with your Vercel domain
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
