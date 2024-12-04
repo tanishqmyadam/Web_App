@@ -111,7 +111,7 @@ if __name__ == "__main__":
     image_urls = plot_csv_files(input_folder, output_folder)
     
     # Generate heatmap
-    matrix_size = (5, 5)
+    matrix_size = (10, 10)
     heatmap_url = generate_heatmap(matrix_size, "measurements")
     
     # Add heatmap to image list
