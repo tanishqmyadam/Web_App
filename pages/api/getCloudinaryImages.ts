@@ -45,7 +45,7 @@ export default async function handler(
 ) {
   try {
     const result = await cloudinary.search
-      .expression('resource_type:image')
+      .expression('folder:graphs')
       .sort_by('created_at', 'desc')
       .execute();
     

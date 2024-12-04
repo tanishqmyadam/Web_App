@@ -18,7 +18,7 @@ export default function GraphDisplay() {
 
   const fetchCloudinaryImages = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/getCloudinaryImages', {
+      const response = await fetch('http://localhost:3000/api/getCloudinaryImages', {
         mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
